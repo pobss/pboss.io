@@ -147,16 +147,16 @@ body {
 	transition: background 0.5s;
 }
 .gallery-header-center-right-links:hover {
-	background-color: #cbb58b;
+	background-color:#9cafbd;
 	color: rgba(255,255,255,1);
 	cursor: pointer;
 }
 .gallery-header-center-right-links-current {
 	color: #FFFFFF;
-	background-color: #cbb58b;
+	background-color:#9cafbd;
 }
 .gallery-header-center-right-links-current:hover {
-	background-color: #cbb58b;
+	background-color:#9cafbd;
 }
 #gallery-content{
 	float: left;
