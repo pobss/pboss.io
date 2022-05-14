@@ -18,6 +18,45 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main CSS -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .accordion {
+          background-color: #2B5A87;
+          color: white;
+          cursor: pointer;
+          padding: 18px;
+          width: 100%;
+          border: none;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+        }
+        
+        .active, .accordion:hover {
+          background-color: #CC5C2F;
+        }
+        
+        .accordion:after {
+          content: '\002B';
+          color: #777;
+          font-weight: bold;
+          float: right;
+          margin-left: 5px;
+        }
+        
+        .active:after {
+          content: "\2212";
+        }
+        
+        .panel {
+          padding: 0 18px;
+          background-color: white;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+        }
+        </style>
 </head>
 
 <body>
@@ -102,22 +141,54 @@
     <div class="container">
         <!--============================= ADMISSION FORM RULES =============================-->
         <section class="admission-form_rules">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 admission-form_mr">
-                        <h2>報名流程及繳交資料相關事項</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries. It has survived not only five centuries, but also the leap into electronic.</p>
-                    </div>
-                    <div class="col-md-5 admission-form_mr">
-                        <ul class="admission-form_listed">
-                            <li>Donec molestie felis eget justo pellentesque</li>
-                            <li>Phasellus et justo sit amet nisl fringilla semper.</li>
-                            <li>Nam vitae ligula at risus posuere laoreet.</li>
-                            <li>Mauris tempor ex id sapien tincidunt porta</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+           
+            <p>報名流程及繳交資料相關事項</p>
+<button class="accordion">Q:每年的簡章公布以及報名期間落在甚麼時候呢?報名程序為何呢?</button>
+<div class="panel">
+  <p>A:每年約11月會公布簡章，隔年1月至2月學校會統一開啟網路報名系統，報考者網路報名後請備妥簡章中所需資料，於報名期限內上傳至招生報名系統。</p>
+</div>
+
+<button class="accordion">Q:我報錯班組別了，怎麼辦?</button>
+<div class="panel">
+  <p>A:如尚未繳費，請直接以新報考學系(所)組繳費。如以繳費，請填寫[中原大學招生報名異動申請書]，依相關規定辦理退費。</p>
+</div>
+
+<button class="accordion">Q:我可以同時報考2個以上的班組嗎?</button>
+<div class="panel">
+  <p>A:可以同時報考，但如皆獲錄取，僅能擇一班組辦理報到及註冊入學。</p>
+</div>
+
+<button class="accordion">Q:書面審查資料會退還嗎?</button>
+<div class="panel">
+  <p>A:報名所繳文件含書面審查資料概不退還，如有紀念意義等重要文件，建議提供影本。</p>
+</div>
+
+<button class="accordion">Q:報名資料繳交方式?</button>
+<div class="panel">
+  <p>A:考生報名皆採線上填寫資料及上傳個人書審相關檔案方式進行，請於報名截止日前至中原大學問鼎中原網站( https://icare.cycu.edu.tw/ )完成線上報名及繳交資料。</p>
+</div>
+
+<button class="accordion">Q:我要如何知道我能不能面試?</button>
+<div class="panel">
+  <p>A:符合面試的名單預計於年月日(星期一)下午2點，公布於中原大學問鼎中原網站( https://icare.cycu.edu.tw/ )，請考生逕行上網查詢。</p>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
         </section>
         <!--//END ADMISSION FORM RULES -->
         <hr />
