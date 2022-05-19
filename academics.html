@@ -104,13 +104,13 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
-<<<<<<< HEAD
+
                 <h2>學校介紹</h2>
                 <p>民國42年由篤信基督、熱心教育人士張靜愚先生、郭克悌先生、賈嘉美牧師、鈕永健先生、陳維屏先生、瞿荊洲先生及桃園中壢地方士紳吳鴻森先生、徐崇德先生等會商籌設一所農工學院，期以基督救世愛人的精神，為國家造就高深科學與工程人才；在歷經多次籌備更名，於民國44年10月奉教育部核准立案，定名為「私立中原理工學院」，以「篤信力行」為校訓，設物理、化學、化學工程、土木工程等4個學系；民國69年8月1日改制為中原大學。</p>
-=======
+
                 <h2>學院介紹</h2>
                 <p> 民國42年由篤信基督、熱心教育人士張靜愚先生、郭克悌先生、賈嘉美牧師、鈕永健先生、陳維屏先生、瞿荊洲先生及桃園中壢地方士紳吳鴻森先生、徐崇德先生等會商籌設一所農工學院，期以基督救世愛人的精神，為國家造就高深科學與工程人才；在歷經多次籌備更名，於民國44年10月奉教育部核准立案，定名為「私立中原理工學院」，以「篤信力行」為校訓，設物理、化學、化學工程、土木工程等4個學系；民國69年8月1日改制為中原大學。</p>
->>>>>>> 3215f7b47fe541be8c49d4b30a6431bff7b7eb10
+
             </div>
         </div>
         <div class="row">
@@ -119,26 +119,43 @@
                     <form>
                         <div class="row">
                             <div class="col-md-6 col-lg-3">
-                                <select class="form-control custom-select">
-                                    <option selected>選擇學院</option>
-                                    <option value="1">理學院</option>
-                                    <option value="2">工學院</option>
-                                    <option value="3">商學院</option>
-                                    <option value="4">設計學院</option>
-                                    <option value="5">人文與教育學院</option>
-                                    <option value="6">法學院</option>
-                                    <option value="7">電機資訊學院</option>
-                                    <option value="8">校級研究中心</option>
-                                </select>
+                                <select id="college-list" onchange="changeCollege(this.selectedIndex)"></select>
+                                   
                             </div>
                             <div class="col-md-6 col-lg-2">
-                                <select class="form-control custom-select">
-                                    <option selected>選擇系所</option>
-                                    <option value="1">in 3 months</option>
-                                    <option value="2">in 6 months</option>
-                                    <option value="3">more than 6 months</option>
-                                </select>
+                                <select id="sector-list"></select>
+                                    
                             </div>
+                            <script type="text/javascript">
+                                var colleges=['理學院','工學院','商學院','設計學院','人文與教育學院','法學院','電機資訊學院','校級研究中心'];
+                                var collegeSelect=document.getElementById("college-list");
+                                var inner="";
+                                for(var i=0;i<colleges.length;i++){
+                                    inner=inner+'<option value=i>'+colleges[i]+'</option>';
+                                }
+                                collegeSelect.innerHTML=inner;
+                                
+                                
+                                var sectors=new Array();
+                                sectors[0]=['應用數學系 ',' 物理學系' ,' 化學系' ,' 心理學系' ,' 生物科技學系' ,' 奈米科技碩士學位學程 ',' 理學院學士學位學程' ];
+                                sectors[1]=['化學工程學系 ',' 土木工程學系 ',' 機械工程學系 ',' 生物醫學工程學系 ',' 環境工程學系 ',' 工學院學士學位學程 ' ];	
+                                sectors[2]=['企業管理學系','國際經營與貿易學系','會計學系','資訊管理學系','財務金融學系','商學博士學位學程 ',' 國際商學學士學位學程 ',' 國際商學碩士學位學程 ',' 巨量資料商業應用碩士學位學程 ',' 領導創新與博雅碩士學程 ','中原大學與美國天普大學商學管理雙學士學位學程 '];	
+                                sectors[3]=[' 建築學系',' 商業設計學系 ',' 室內設計學系 ','地景建築學系 ','設計學院社會設計學士學位學程 ','設計學博士學位學程','設計學士原住民專班','文創設計碩士學位學程'];
+                                sectors[4]=[' 特殊教育學系 ',' 應用外國語文學系 ',' 應用華語文學系 ',' 宗教研究所',' 教育研究所 ',' 音樂產業碩士學位學程 ',' 人文與教育學院學士學位學程','全校外籍生大一不分系學士學位學程 '];
+                                sectors[5]=['財金法律學系'];
+                                sectors[7]=['工業與系統工程學系 ',' 電子工程學系 ','資訊工程學系 ',' 電機工程學系','電機資訊學院學士班','電機資訊學院人工智慧應用學士學位學程','通訊工程碩士學位學程','中原大學美國威大密爾瓦基分校電機與資訊工程雙學士學位學程','智慧運算與大數據學士班/碩士學位學程'];
+                                sectors[8]=['薄膜技術研究發展中心 ',' 智慧製造研究發展中心 '];
+                                
+                                function changeCollege(index){
+                                    var Sinner="";
+                                    for(var i=0;i<sectors[index].length;i++){
+                                        Sinner=Sinner+'<option value=i>'+sectors[index][i]+'</option>';
+                                    }
+                                    var sectorSelect=document.getElementById("sector-list");
+                                    sectorSelect.innerHTML=Sinner;
+                                }
+                                changeCollege(document.getElementById("college-list").selectedIndex);
+                            </script>
                             <div class="col-md-6 col-lg-2">
                                 <select class="form-control custom-select">
                                     <option selected>選擇年級</option>
