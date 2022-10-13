@@ -35,12 +35,20 @@
                 <div class="row">
                     <div class="col-md-8">
                         <div class="landing-title">
-                            <h2>Advanced Certificate in Applied Management </h2>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered .</p>
-                            <h4>Admission</h4>
+                            <h2>中原大學各科系口面試攻略講座</h2><br>
+                            <h4>【講座地點】</h4>
+
+                            <p>線上講座：歡迎填表報名，索取線上講座連結！<br>
+                                
+                            實體講座：各科系皆有場次，歡迎填表報名洽詢，由專人聯繫您。</p>
+                                
+                            <h4>【講座時間】</h4>
+                                
+                            <p>（講座詳細時間流程，可能依各地據點而有所更動，歡迎填表洽詢）</p><br>
+                            <h4>你可能會喜歡的主體</h4>
                             <ul>
-                                <li><a href="#">There are many variations of passages</a></li>
-                                <li><a href="#">Contrary to popular belief</a></li>
+                                <li><a href="course-detail.html">各學院相關科系介紹</a></li>
+                                <li><a href="research.html">宿舍生活/社團活動</a></li>
                                 <li><a href="#">Accompanied by English versions </a></li>
                                 <li><a href="#">Lorem Ipsum passage, and going through</a></li>
                             </ul>
@@ -48,33 +56,40 @@
                     </div>
                     <div class="col-md-4">
                         <div class="landing-form-wrap">
-                            <h4 class="text-center mb-3">Join the Course</h4>
+                            <h4 class="text-center mb-3">報名表單</h4>
                             <form action="php/admission.php" method="post" id="admissionform">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <input type="text" name="first_name" class="form-control" placeholder="First Name" required>
+                                            <input type="text" name="first_name" class="form-control" placeholder="姓" required>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="last_name" class="form-control" placeholder="Last Name" required>
+                                            <input type="text" name="last_name" class="form-control" placeholder="名" required>
                                         </div>
                                         <div class="form-group">
                                             <input type="email" name="email" class="form-control" placeholder="Email" required>
                                         </div>
                                         <div class="form-group">
-                                            <select class="form-control custom-select" name="course" required>
-                                                <option selected="" value="">Course</option>
-                                                <option value="select">One</option>
-                                                <option value="select">Two</option>
-                                                <option value="select">Three</option>
-                                                <option value="select">Four</option>
+                                            <select class="form-control custom-select" name="講座類型" required>
+                                                <option selected="" value="">講座類型</option>
+                                                <option value="select">實體</option>
+                                                <option value="select">線上</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+                                            <select class="form-control custom-select" name="線上場次" required>
+                                                <option selected="" value="">報名場次</option>
+                                                <option value="select">第一梯次(資管系06/28 13:00~16:00)</option>
+                                                <option value="select">第二梯次(財經系07/03 13:00~16:00)</option>
+                                                <option value="select">第三梯次(電機系07/05 13:00~16:00)</option>
+                                                <option value="select">第四梯次(國貿系07/08 13:00~16:00)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" name="phone" class="form-control" placeholder="電話" required>
                                         </div>
                                         <div class="form-group mb-0">
-                                            <button type="submit" class="btn btn-warning" id="js-admission-btn">APPLY NOW</button>
+                                            <button type="submit" class="btn btn-warning" id="js-admission-btn">送出</button>
                                             <div id="js-admission-result" data-success-msg="Success, Your application has been sent" data-error-msg="Oops! Something went wrong"></div>
                                         </div>
                                     </div>
@@ -92,42 +107,72 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="text-center mb-4">Course Details</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <h2 class="text-center mb-4">面試講座詳細資訊</h2>
+                    <div class="table" style="margin-left:36%">
+                    <table style="border:10px #FFD382 groove;" cellpadding="10" border='0',font-size="20px">
+                        　<tr>
+                        　<td colspan="2">中原大學面試講座流程</td>
+                        　</tr>
+                        　<tr>
+                        　<td>13:00~13:30</td>
+                        　<td>入場、報到</td>
+                        　</tr>
+                        　<tr>
+                        　<td>13:30~14:00</td>
+                        　<td>國營聯招-面試流程簡介</td>
+                        　</tr>
+                        　<tr>
+                        　<td>14:00~14:30</td>
+                        　<td>自傳撰寫秘訣</td>
+                        　</tr>
+                        　<tr>
+                        　<td>14:30~15:00</td>
+                        　<td>常見題目對答</td>
+                        　</tr>
+                        　<tr>
+                        　<td>15:00~15:30</td>
+                        　<td>考官評分重點</td>
+                        　</tr>
+                        　<tr>
+                        　<td>15:30~16:00</td>
+                        　<td>問答時間</td>
+                        　</tr>       
+                        </table><br>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="admission_discription">
-                        <h4>Advanced Certificate in Applied Management</h4>
-                        <div class="star-rating">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-o" aria-hidden="true"></i>
-                        </div>
+            <!-- <div class="row"> -->
+                <!-- <div class="col-lg-8"> -->
+                    <!-- <div class="admission_discription"> -->
+                        <!-- <h4>Advanced Certificate in Applied Management</h4> -->
+                        <!-- <div class="star-rating"> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star" aria-hidden="true"></i> -->
+                            <!-- <i class="fa fa-star-o" aria-hidden="true"></i> -->
+                        <!-- </div> -->
                         <!-- // end .star-rating -->
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                            <li>In consequat lacus dapibus, iaculis massa vitae, condimentum risus.</li>
-                            <li>Curabitur varius magna quis ultrices lacinia.</li>
-                            <li>Consequat lacus dapibus, iaculis massa vitae, condimentum.</li>
-                        </ul>
-                        <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="admission_insruction">
-                        <h4>Instructors</h4>
-                        <img src="images/admission-detail/instruction-img.jpg" class="img-fluid" alt="#">
-                        <p>Frank Harvey
-                            <br>
-                            <span>Master of Science</span></p>
-                    </div>
-                </div>
-            </div>
+                        <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p> -->
+                        <!-- <ul> -->
+                            <!-- <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li> -->
+                            <!-- <li>In consequat lacus dapibus, iaculis massa vitae, condimentum risus.</li> -->
+                            <!-- <li>Curabitur varius magna quis ultrices lacinia.</li> -->
+                            <!-- <li>Consequat lacus dapibus, iaculis massa vitae, condimentum.</li> -->
+                        <!-- </ul> -->
+                        <!-- <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing.</p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+                <!-- <div class="col-lg-4"> -->
+                    <!-- <div class="admission_insruction"> -->
+                        <!-- <h4>Instructors</h4> -->
+                        <!-- <img src="images/admission-detail/instruction-img.jpg" class="img-fluid" alt="#"> -->
+                        <!-- <p>Frank Harvey -->
+                            <!-- <br> -->
+                            <!-- <span>Master of Science</span></p> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mb-3">Student testimonial</h2>
