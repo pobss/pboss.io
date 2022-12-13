@@ -128,14 +128,54 @@
                     <input class="form-control" name="reenteremail" placeholder="確認Email" type="email" />
                 </div>
                 <div class="form-group">
-                    <input class="form-control" name="school" placeholder="填寫想要的科系(全名)" type="school" />
-                </div>
+                                        <div >
+                                            <select id="college-list"  class="form-control custom-select" onchange="changeCollege(this.selectedIndex)"></select>
+                                               
+                                        </div>
+                                        <div >
+                                            <select id="sector-list"  class="form-control custom-select"></select></select>
+                                                
+                                        </div>
+                                        <script type="text/javascript">
+                                            var colleges=['理學院','工學院','商學院','設計學院','人文與教育學院','法學院','電機資訊學院','校級研究中心'];
+                                            var collegeSelect=document.getElementById("college-list");
+                                            var inner="";
+                                            for(var i=0;i<colleges.length;i++){
+                                                inner=inner+'<option value=i>'+colleges[i]+'</option>';
+                                            }
+                                            collegeSelect.innerHTML=inner;
+                                            
+                                            
+                                            var sectors=new Array();
+                                            sectors[0]=['應用數學系 ',' 物理學系' ,' 化學系' ,' 心理學系' ,' 生物科技學系' ,' 奈米科技碩士學位學程 ',' 理學院學士學位學程' ];
+                                            sectors[1]=['化學工程學系 ',' 土木工程學系 ',' 機械工程學系 ',' 生物醫學工程學系 ',' 環境工程學系 ',' 工學院學士學位學程 ' ];	
+                                            sectors[2]=['企業管理學系','國際經營與貿易學系','會計學系','資訊管理學系','財務金融學系','商學博士學位學程 ',' 國際商學學士學位學程 ',' 國際商學碩士學位學程 ',' 巨量資料商業應用碩士學位學程 ',' 領導創新與博雅碩士學程 ','中原大學與美國天普大學商學管理雙學士學位學程 '];	
+                                            sectors[3]=[' 建築學系',' 商業設計學系 ',' 室內設計學系 ','地景建築學系 ','設計學院社會設計學士學位學程 ','設計學博士學位學程','設計學士原住民專班','文創設計碩士學位學程'];
+                                            sectors[4]=[' 特殊教育學系 ',' 應用外國語文學系 ',' 應用華語文學系 ',' 宗教研究所',' 教育研究所 ',' 音樂產業碩士學位學程 ',' 人文與教育學院學士學位學程','全校外籍生大一不分系學士學位學程 '];
+                                            sectors[5]=['財金法律學系'];
+                                            sectors[7]=['工業與系統工程學系 ',' 電子工程學系 ','資訊工程學系 ',' 電機工程學系','電機資訊學院學士班','電機資訊學院人工智慧應用學士學位學程','通訊工程碩士學位學程','中原大學美國威大密爾瓦基分校電機與資訊工程雙學士學位學程','智慧運算與大數據學士班/碩士學位學程'];
+                                            sectors[8]=['薄膜技術研究發展中心 ',' 智慧製造研究發展中心 '];
+                                            
+                                            function changeCollege(index){
+                                                var Sinner="";
+                                                for(var i=0;i<sectors[index].length;i++){
+                                                    Sinner=Sinner+'<option value=i>'+sectors[index][i]+'</option>';
+                                                }
+                                                var sectorSelect=document.getElementById("sector-list");
+                                                sectorSelect.innerHTML=Sinner;
+                                            }
+                                            changeCollege(document.getElementById("college-list").selectedIndex);
+                                        </script>
+                                        
+                                       
+                                    
+               
                 <label>
-                    出生日</label>
+                    學測各科級分</label>
                     <div class="row">
                         <div class="col-xs-4 col-md-4">
                             <select class="form-control custom-select">
-                             <option selected="" value="">月</option>
+                             <option selected="" value="">國文</option>
                              <option value="select">1</option>
                              <option value="select">2</option>
                              <option value="select">3</option>
@@ -148,11 +188,15 @@
                              <option value="select">10</option>
                              <option value="select">11</option>
                              <option value="select">12</option>
+                             <option value="select">13</option>
+                             <option value="select">14</option>
+                             <option value="select">15</option>
+                            
                          </select>
                      </div>
                      <div class="col-xs-4 col-md-4">
                         <select class="form-control custom-select">
-                            <option selected="" value="">日</option>
+                            <option selected="" value="">數學A</option>
                             <option value="select">1</option>
                             <option value="select">2</option>
                             <option value="select">3</option>
@@ -168,36 +212,91 @@
                             <option value="select">13</option>
                             <option value="select">14</option>
                             <option value="select">15</option>
-                            <option value="select">16</option>
-                            <option value="select">17</option>
-                            <option value="select">18</option>
-                            <option value="select">19</option>
-                            <option value="select">20</option>
-                            <option value="select">21</option>
-                            <option value="select">22</option>
-                            <option value="select">23</option>
-                            <option value="select">24</option>
-                            <option value="select">25</option>
-                            <option value="select">26</option>
-                            <option value="select">27</option>
-                            <option value="select">28</option>
-                            <option value="select">29</option>
-                            <option value="select">30</option>
-                            <option value="select">31</option>
+                           
                         </select>
                     </div>
                     <div class="col-xs-4 col-md-4">
                         <select class="form-control custom-select">
-                            <option selected="" value="">年</option>
-                            <option value="select">2002</option>
-                            <option value="select">2003</option>
-                            <option value="select">2004</option>
-                            <option value="select">2005</option>
-                            <option value="select">2006</option>
-                            <option value="select">2007</option>
-                            <option value="select">2008</option>
-                            <option value="select">2009</option>
-                            <option value="select">2010</option>
+                            <option selected="" value="">數學B</option>
+                            <option value="select">1</option>
+                            <option value="select">2</option>
+                            <option value="select">3</option>
+                            <option value="select">4</option>
+                            <option value="select">5</option>
+                            <option value="select">6</option>
+                            <option value="select">7</option>
+                            <option value="select">8</option>
+                            <option value="select">9</option>
+                            <option value="select">10</option>
+                            <option value="select">11</option>
+                            <option value="select">12</option>
+                            <option value="select">13</option>
+                            <option value="select">14</option>
+                            <option value="select">15</option>
+                           
+                        </select>
+                    </div>
+                    <div class="col-xs-4 col-md-4">
+                        <select class="form-control custom-select">
+                            <option selected="" value="">英文</option>
+                            <option value="select">1</option>
+                            <option value="select">2</option>
+                            <option value="select">3</option>
+                            <option value="select">4</option>
+                            <option value="select">5</option>
+                            <option value="select">6</option>
+                            <option value="select">7</option>
+                            <option value="select">8</option>
+                            <option value="select">9</option>
+                            <option value="select">10</option>
+                            <option value="select">11</option>
+                            <option value="select">12</option>
+                            <option value="select">13</option>
+                            <option value="select">14</option>
+                            <option value="select">15</option>
+                           
+                        </select>
+                    </div>
+                    <div class="col-xs-4 col-md-4">
+                        <select class="form-control custom-select">
+                            <option selected="" value="">自然</option>
+                            <option value="select">1</option>
+                            <option value="select">2</option>
+                            <option value="select">3</option>
+                            <option value="select">4</option>
+                            <option value="select">5</option>
+                            <option value="select">6</option>
+                            <option value="select">7</option>
+                            <option value="select">8</option>
+                            <option value="select">9</option>
+                            <option value="select">10</option>
+                            <option value="select">11</option>
+                            <option value="select">12</option>
+                            <option value="select">13</option>
+                            <option value="select">14</option>
+                            <option value="select">15</option>
+                           
+                        </select>
+                    </div>
+                    <div class="col-xs-4 col-md-4">
+                        <select class="form-control custom-select">
+                            <option selected="" value="">社會</option>
+                            <option value="select">1</option>
+                            <option value="select">2</option>
+                            <option value="select">3</option>
+                            <option value="select">4</option>
+                            <option value="select">5</option>
+                            <option value="select">6</option>
+                            <option value="select">7</option>
+                            <option value="select">8</option>
+                            <option value="select">9</option>
+                            <option value="select">10</option>
+                            <option value="select">11</option>
+                            <option value="select">12</option>
+                            <option value="select">13</option>
+                            <option value="select">14</option>
+                            <option value="select">15</option>
+                           
                         </select>
                     </div>
                 </div>
@@ -212,8 +311,8 @@
                 <br />
                 <br />
                 <div class="a">
-                <input type="submit" class="btn btn-warning" id="js-subscribe-btn"><p></p>
-                <a href="css/chert/index.html" class="btn btn-warning">進入落點分析</a>
+               
+                <a href="css/chert/index.html" class="btn btn-warning">提交進入落點分析</a>
                 </div>
             </form>
         </div>
